@@ -1,6 +1,6 @@
 # Editor File Search
 
->Note: It works only with "4.9"
+>Note: It works only with WordPress version "4.9"
 
 Search field in the WordPress Plugin &amp; Theme Editor window.
 
