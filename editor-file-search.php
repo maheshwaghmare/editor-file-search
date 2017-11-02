@@ -5,7 +5,7 @@
  * Plugin URI: https://github.com/maheshwaghmare/editor-file-search/
  * Author: Mahesh M. Waghmare
  * Author URI: https://maheshwaghmare.wordpress.com/
- * Version: 1.0.0
+ * Version: 1.0.1
  * License: GPL2
  * Text Domain: editor-file-search
  *
@@ -15,7 +15,7 @@
 /**
  * Set constants.
  */
-define( 'EDITOR_FILE_SEARCH_VER',  '1.0.0' );
+define( 'EDITOR_FILE_SEARCH_VER',  '1.0.1' );
 define( 'EDITOR_FILE_SEARCH_FILE', __FILE__ );
 define( 'EDITOR_FILE_SEARCH_BASE', plugin_basename( EDITOR_FILE_SEARCH_FILE ) );
 define( 'EDITOR_FILE_SEARCH_DIR',  plugin_dir_path( EDITOR_FILE_SEARCH_FILE ) );

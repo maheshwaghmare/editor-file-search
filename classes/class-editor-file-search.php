@@ -51,15 +51,21 @@ if( ! class_exists( 'Editor_File_Search' ) ) :
 		/**
 		 * Add Search Input
 		 *
+		 * @since 1.0.1 	Added multisite compatibility.
 		 * @since 1.0.0
 		 * @return void
 		 */
 		function markup() {
 
-			if( 'theme-editor' !== get_current_screen()->base && 'plugin-editor' !== get_current_screen()->base ) {
+			if(
+				'theme-editor' !== get_current_screen()->base &&
+				'plugin-editor' !== get_current_screen()->base &&
+				'theme-editor-network' !== get_current_screen()->base &&
+				'plugin-editor-network' !== get_current_screen()->base
+			) {
 				return;
 			}
-			
+
 			?>
 			<script type="text/template" id="tmpl-editor-file-search">
 				<input id="theme-files-search" type="text" placeholder="Search File..." class="editor-file-search">
@@ -70,13 +76,19 @@ if( ! class_exists( 'Editor_File_Search' ) ) :
 		/**
 		 * Enqueue Scripts
 		 *
+		 * @since 1.0.1 	Added multisite compatibility.
 		 * @since 1.0.0
 		 * @param  string $hook Current hook.
 		 * @return void
 		 */
 		function enqueue_scripts( $hook = '' ) {
 
-			if( 'theme-editor.php' !== $hook && 'plugin-editor.php' !== $hook ) {
+			if(
+				'theme-editor' !== get_current_screen()->base &&
+				'plugin-editor' !== get_current_screen()->base &&
+				'theme-editor-network' !== get_current_screen()->base &&
+				'plugin-editor-network' !== get_current_screen()->base
+			) {
 				return;
 			}
 
