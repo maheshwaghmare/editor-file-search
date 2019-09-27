@@ -68,7 +68,8 @@ if( ! class_exists( 'Editor_File_Search' ) ) :
 
 			?>
 			<script type="text/template" id="tmpl-editor-file-search">
-				<input id="theme-files-search" type="text" placeholder="Search File..." class="editor-file-search">
+				<label for="editor-files-search" class="screen-reader-text"><?php esc_html_e( 'Search file...', 'editor-file-search' ); ?></label>
+				<input id="editor-files-search" name="editor-files-search" type="search" placeholder="<?php esc_html_e( 'Search file...', 'editor-file-search' ); ?>" class="editor-file-search">
 			</script>
 			<?php
 		}
