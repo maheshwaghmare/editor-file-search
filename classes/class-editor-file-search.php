@@ -42,10 +42,8 @@ if( ! class_exists( 'Editor_File_Search' ) ) :
 		 * @since 1.0.0
 		 */
 		public function __construct() {
-
 			add_action( 'admin_head'            , array( $this, 'markup' ) );
 			add_action( 'admin_enqueue_scripts' , array( $this, 'enqueue_scripts' ) );
-
 		}
 
 		/**
@@ -56,7 +54,6 @@ if( ! class_exists( 'Editor_File_Search' ) ) :
 		 * @return void
 		 */
 		function markup() {
-
 			if(
 				'theme-editor' !== get_current_screen()->base &&
 				'plugin-editor' !== get_current_screen()->base &&
@@ -66,10 +63,11 @@ if( ! class_exists( 'Editor_File_Search' ) ) :
 				return;
 			}
 
+			$placeholder = apply_filters( 'editor_file_search_input_placeholder', esc_html__( 'Search file...', 'editor-file-search' ) );
 			?>
 			<script type="text/template" id="tmpl-editor-file-search">
-				<label for="editor-files-search" class="screen-reader-text"><?php esc_html_e( 'Search file...', 'editor-file-search' ); ?></label>
-				<input id="editor-files-search" name="editor-files-search" type="search" placeholder="<?php esc_html_e( 'Search file...', 'editor-file-search' ); ?>" class="editor-file-search">
+				<label for="editor-files-search" class="screen-reader-text"><?php echo esc_html( $placeholder ); ?></label>
+				<input id="editor-files-search" name="editor-files-search" type="search" placeholder="<?php echo esc_html( $placeholder ); ?>" class="editor-file-search">
 			</script>
 			<?php
 		}
@@ -83,7 +81,6 @@ if( ! class_exists( 'Editor_File_Search' ) ) :
 		 * @return void
 		 */
 		function enqueue_scripts( $hook = '' ) {
-
 			if(
 				'theme-editor' !== get_current_screen()->base &&
 				'plugin-editor' !== get_current_screen()->base &&
