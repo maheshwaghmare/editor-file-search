@@ -1,7 +1,7 @@
 === Theme and Plugin file Search ===
 Contributors: Mahesh901122
 Tags: Editor File Search, Theme File Search, File Search, Plugin File Search, Editor File Search
-Tested up to: 5.2
+Tested up to: 5.4
 Stable tag: 1.1.0
 Requires at least: 4.9
 
