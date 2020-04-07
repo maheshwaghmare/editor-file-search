@@ -2,7 +2,7 @@
 Contributors: Mahesh901122
 Tags: Editor File Search, Theme File Search, File Search, Plugin File Search, Editor File Search
 Tested up to: 5.4
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 Requires at least: 4.9
 
 Add the search filed in theme & plugin file editor window.
@@ -22,6 +22,9 @@ Extend on [Github](https://github.com/maheshwaghmare/editor-file-search/)
 1. Install the <code>Theme and Plugin file Search</code> plugin either via the WordPress plugin directory, or by uploading the files to your server at <code>wp-content/plugins</code>.
 
 == Changelog ==
+
+= 1.1.1 =
+* Improvement: Added compatibility for WordPress 5.4.
 
 = 1.1.0 =
 * New: Added filter `editor_file_search_input_placeholder` to change the input placeholder value.
